@@ -1,0 +1,96 @@
+.title {
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+
+.header {
+  font-weight: bold;
+  background: #f2f2f2;
+  font-size: 32rpx;
+  padding: 5rpx;
+  line-height: 82rpx;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.item {
+  background: #fff;
+  font-size: 32rpx;
+  padding: 5rpx;
+  line-height: 82rpx;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 48rpx;
+  height: 48rpx;
+  float: left;
+}
+
+.search_placeholder {
+  color: #c9c9c9;
+  font-size: 32rpx;
+  padding-bottom: 15rpx;
+  padding-top: 15rpx;
+  padding-left: 20rpx;
+}
+
+.line {
+  background: #e2e2e2;
+  height: 2rpx;
+  margin-top: 15rpx;
+}
+
+label {
+  float: left;
+}
+
+.float-right{
+  float: right
+}
+
+.float-left{
+  float: left
+}
+
+.container{
+  min-height: 120rpx;
+}
+
+.footer_car_item{
+	padding: 30rpx 20rpx;
+	border-bottom: 1rpx solid #e2e2e2;
+  box-sizing: border-box;
+  align-items: center;
+  width: 100%;
+}
+
+.flex{
+  display: flex; 
+}
+
+.car_item_title{
+	color: #333;
+	font-size: 30rpx;
+	margin-bottom: 20rpx;
+}
+.car_item_text{
+	font-size: 24rpx;
+	color: #838383;
+	text-align: left;
+}
+
+.num_btn_block{
+	flex-grow: 1;
+	justify-content: flex-end;
+}
+
+.icon-edit {
+  width: 35rpx;
+  height: 35rpx;
+}

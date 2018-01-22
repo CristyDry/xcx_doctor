@@ -1,0 +1,31 @@
+/* pages/my/my.wxss */
+.item {
+  background: #fff;
+  font-size: 32rpx;
+  padding: 10rpx;
+  line-height: 82rpx;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+.line {
+  background: #e2e2e2;
+  height: 2rpx;
+  margin-top: 15rpx;
+}
+.header {
+  font-weight: bold;
+  background: #f2f2f2;
+  font-size: 32rpx;
+  padding: 5rpx;
+  line-height: 82rpx;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 48rpx;
+  height: 48rpx;
+  float: left;
+}

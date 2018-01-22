@@ -1,0 +1,28 @@
+<view class="header_container">
+</view>
+
+<view class="section">
+	<view class="login_in_section_body">
+		<view class="section_line"></view>
+		<view class="section_addr_info flex psr">
+			<view class="section_addr_icon">
+				<image src="../../images/icon_user.png"></image>
+			</view>
+			<input type="text" cursor-spacing="20" bindinput='registAccount' placeholder="请输入手机号" placeholder-class="search_placeholder"/>
+		</view> 
+		<view class="section_addr_info flex psr">
+			<view class="section_order_icon">
+				<image src="../../images/icon_password.png"></image>
+			</view>
+			<input type="password" cursor-spacing="20" bindinput='registPwd' placeholder="请输入密码" placeholder-class="search_placeholder"/>
+		</view>
+		<view  class="section_btn login_in bg_03" bindtap="loginIn">登录</view>
+	</view>	
+	<view class="section_footer">
+		<view></view>
+	</view>
+</view>
+<view class="company_info">
+	<view></view>
+	<view></view>
+</view>

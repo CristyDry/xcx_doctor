@@ -1,0 +1,61 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="title" bindtap='onChooseStore'>
+    <text>{{store?store.name:'请选择店铺'}}</text>
+  </view>
+  <view class='header'>
+    <image class='icon' src='/images/rx/stethoscope.png'></image>
+    <text>患者信息</text>
+  </view>
+  <view class='item'>
+    <label>　名称</label>
+    <input id='name' class='search_placeholder' bindinput='registName' placeholder='名称' value='{{post.patientName}}'></input>
+  </view>
+  <view class='line'></view>
+  <view class='item'>
+    <label>　性别　</label>
+    <radio-group name="radio-group" bindchange="radioChange">
+      <label>
+        <radio value="1" checked='true' />男</label>
+      <label>
+        <radio value="0" />女</label>
+    </radio-group>
+  </view>
+   <view class='line'></view>
+  <view class='item'>
+    <label>　年龄</label>
+    <input class='search_placeholder' bindinput='registAge' placeholder='年龄' value='{{post.patientAge}}'></input>
+  </view>
+  <view class='line'></view>
+  <view class='item'>
+    <label>　电话</label>
+    <input id='name' class='search_placeholder' bindinput='registPhone' placeholder='电话' value='{{post.patientPhone}}'></input>
+  </view>
+  <view class='header'>
+    <image class='icon' src='/images/rx/doctor.png'></image>
+    <text>诊断信息</text>
+  </view>
+  <textarea auto-height='true' value='{{post.clinicalDiagnosis}}' bindinput='registClinicalDiagnosis' class='search_placeholder' placeholder='诊断信息'></textarea>
+  <view bindtap='onChooseItem' class='header'>
+    <image class='icon' src='/images/rx/med_kit.png'></image>
+    <text style='width:90%'>记录信息</text>
+    <image class='icon float-right' src='/images/rx/item_add_black.png'></image>
+  </view>
+  <view class='container'>
+    <view class="footer_car_item" wx:for="{{items}}" wx:for-index="idx" wx:for-item="item">
+      <view bindtap='registItem' data-index="{{idx}}">
+        <view class="car_item_title">
+          <image src='/images/remark.png' class='icon-edit' wx:if="{{item.sig != ''}}"></image>
+          {{item.productName}} x {{item.total}}
+        </view>
+        <view class="car_item_text">
+          <text>{{item.productUnit}}　　</text>
+          <text>￥{{item.price}}</text>
+        </view>
+      </view>
+
+    </view>
+  </view>
+  <view>
+    <button bindtap='submit'>提交</button>
+  </view>
+</form>

@@ -1,0 +1,44 @@
+/* pages/item/item.wxss */
+.header {
+  background: #fff;
+  font-size: 32rpx;
+  padding: 5rpx;
+  line-height: 82rpx;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.search_placeholder {
+  color: #666;
+  font-size: 32rpx;
+  padding-bottom: 15rpx;
+  padding-top: 15rpx;
+  padding-left: 20rpx;
+  width: 100%
+}
+
+.line {
+  background: #e2e2e2;
+  height: 2rpx;
+}
+
+.flex-item{
+  flex:1
+}
+
+.flex-wrp{  
+  display: flex;  
+  flex-direction: row;  
+  align-items: center;
+} 
+
+.item-img {
+  width: 180rpx;
+  height: 180rpx;
+}

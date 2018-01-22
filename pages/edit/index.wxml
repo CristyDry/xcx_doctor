@@ -1,0 +1,5 @@
+<!--pages/edit/index.wxml-->
+<view>
+<textarea  bindinput='registTxt' value='{{txt}}'></textarea>
+<button bindtap='registBtn'>确定</button>
+</view>

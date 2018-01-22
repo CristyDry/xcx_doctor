@@ -1,0 +1,7 @@
+/* pages/edit/index.wxss */
+textarea{
+  padding: 40rpx;
+  background-color: #f1f1f1;
+  width: 100%;
+  min-height: 480rpx;
+}

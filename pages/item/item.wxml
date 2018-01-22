@@ -1,0 +1,17 @@
+<!--pages/item/item.wxml-->
+<view class='header'>
+  <input id='name' class='search_placeholder' bindinput='registName' placeholder='名称'></input>
+  <image class='icon' src='/images/rx/item_search.png'></image>
+</view>
+<view class='line'></view>
+<view wx:for="{{items}}" wx:for-item="item">
+  <view class="flex-wrp">
+    <view class="flex-item">
+      <image class='item-img' src='{{item.productPic}}'></image>
+    </view>
+    <view class="flex-item">
+    
+    </view>
+  </view>
+  <view class='line'></view>
+</view>

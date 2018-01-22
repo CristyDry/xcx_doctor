@@ -1,0 +1,47 @@
+<view class="container">
+    <view class="status-box">
+        <view bindtap="statusTap" class="status-label {{index == currentType ? 'active' : ''}}" wx:for-items="{{statusType}}" wx:key="{{index}}" data-index="{{index}}">
+            {{item}}
+            <view class="{{tabClass[index]}}"></view>
+        </view>
+    </view>
+    <view class="no-order" hidden="{{orderList ? true : false}}">
+        <image src="/images/no-order.png" class="no-order-img"></image>
+        <view class="text">暂无订单</view>
+    </view>
+    <view class="order-list" hidden="{{orderList ? false : true}}">
+        <view class="a-order" wx:for-items="{{orderList}}" wx:for-item="item">
+            <view class="order-date">
+                <view class="date-box">处方号:{{item.rxNo}} </view>
+                <view class="status {{(item.status==2 || item.status==3) ? '':'red'}}">{{item.statusStr}}</view>
+            </view>
+            <view class="goods-info" bindtap="orderDetail" data-id="{{item.id}}">
+                <view class="goods-des">
+                   <view>时间：{{item.rxDate}}</view>
+                   <view wx:if="{{item.departmentName && item.departmentName != ''}}">店铺： {{item.departmentName}}</view>
+                </view>
+            </view>
+            <view >
+                 <!--<scroll-view class="goods-img-container" scroll-x="true">
+                    <view class="img-box" wx:for-items="{{item.zhengheRxDetailList}}" wx:for-item="detail">
+                        <image src="{{detail.imgUrl}}" class="goods-img"></image>
+                        <text>{{detail.productName}}</text> 
+                    </view>
+                </scroll-view> -->
+            </view>
+            <view >
+                   <view class="img-box" wx:for-items="{{item.zhengheRxDetailList}}" wx:for-item="detail">
+                        <view class="order-date1">
+                            <view class="date-box">{{detail.productName}} x  {{detail.num}}</view>
+                        </view>
+                    </view>
+            
+            </view>
+            <view class="price-box">
+                <view class="total-price">合计：¥ {{item.totalAmount}}</view>
+                <view class="btn topay-btn" hidden="{{item.status==0? fslse : true}}" bindtap="cancelOrderTap"  data-id="{{item.id}}">取消订单</view>    
+            </view>  
+        </view>
+
+    </view>
+</view>

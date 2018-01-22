@@ -1,0 +1,146 @@
+page{
+  background-color: #F1F1F1;  
+}
+
+image{
+	vertical-align: middle;
+}
+.header_container{
+	padding-top: 60rpx;
+	height: 380rpx;
+	background: -webkit-linear-gradient(bottom,#F1F1F1 0%,#F1F1F1 99%,#F1F1F1 00%);
+	position: relative;
+}
+
+.section{
+	margin-top: -188rpx;
+	margin-left: auto;
+	margin-right: auto;	
+	width: 670rpx;
+}
+
+.login_in_section_body{
+	border-radius: 10rpx;
+	background-color: #fff;
+	padding:30rpx 20rpx 0 20rpx;
+	height: 540rpx;
+	position: relative;
+	z-index: 3;
+	overflow: hidden;
+  border-color: #000000;
+  border-width: 2rpx;
+}
+
+.section_line{
+	height: 2rpx;
+	width: 100%;
+	position: absolute;
+	top: 120rpx;
+	left: 0;
+}
+.section_line::after{
+	content: "";
+	display: block;
+	height: 20rpx;
+	width: 20rpx;
+	background: -webkit-linear-gradient(bottom,rgb(255,69,28) 0%,rgb(255,65,26) 100%);
+	border-radius: 50%;
+	position: absolute;
+	left: -10rpx;
+	top: 1rpx;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.section_line::before{
+	content: "";
+	display: block;
+	height: 20rpx;
+	width: 20rpx;
+	background: -webkit-linear-gradient(bottom,rgb(255,69,28) 0%,rgb(255,65,26) 100%);
+	border-radius: 50%;
+	position: absolute;
+	right: -10rpx;
+	top: 1rpx;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.section_addr_info{
+	height: 120rpx;
+	padding: 0rpx 20rpx;
+	font-size: 26rpx;
+	border-bottom: 1rpx dashed #c9c9c9;
+}
+.section_addr_info input{
+	font-size: 36rpx;
+	color: #333;
+}
+.section_addr_icon,
+.section_order_icon,
+.section_phone_icon,
+.section_pwd_icon,
+.section_againpwd_icon,
+.section_validate_icon,
+.section_fg_phone_icon,
+.section_fg_pwd_icon,
+.section_fg_againpwd_icon,
+.section_fg_validate_icon{
+	margin-right: 30rpx;
+}
+.section_addr_icon>image,
+.section_order_icon>image,
+.section_phone_icon>image,
+.section_pwd_icon>image,
+.section_againpwd_icon>image,
+.section_validate_icon>image,
+.section_fg_phone_icon>image,
+.section_fg_pwd_icon>image,
+.section_fg_againpwd_icon>image,
+.section_fg_validate_icon>image{
+	width: 46rpx;
+	height: 46rpx;
+}
+
+.search_placeholder{
+	color: #c9c9c9;
+	font-size: 36rpx;
+}
+
+.section_btn{
+	width: 500rpx;
+	height: 80rpx;
+	border-radius: 10rpx;
+	line-height: 80rpx;
+	font-size: 30rpx;
+	text-align: center;
+	margin: 94rpx auto 0;
+}
+
+.login_in{
+	color: #fff;
+	background-color: #00AEDD;
+}
+
+.login_in{
+	background-color: #00AEDD;
+	box-shadow: 0 2rpx 5rpx 0 rgba(181,181,181,0.5);
+}
+
+.bg_03{
+	background-color: #00AEDD;
+	box-shadow: 0 2rpx 5rpx 0 rgba(255,255,255,0.5);
+}
+
+.section_footer{
+	padding: 0 20rpx;
+	position: relative;
+	z-index: 1;
+}
+
+.section_footer>view{
+	background-color: #fff;
+	border-radius: 0 0 10rpx 10rpx;
+	box-shadow: 0 2rpx 5rpx 0 rgb(240,240,240),-2rpx 0 5rpx 0 rgb(240,240,240),2rpx 0 5rpx 0 rgb(240,240,240);
+	width: 100%;
+	height: 20rpx;
+}

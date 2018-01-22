@@ -1,0 +1,18 @@
+/* pages/store/store.wxss */
+.header{
+  font-weight: bold;
+  background: #F2F2F2;
+  padding: 20rpx;
+  font-size: 32rpx
+}
+
+.child{
+  margin: 15rpx 50rpx 15rpx 50rpx;
+  font-size: 30rpx;
+}
+
+.line{
+  background: #E2E2E2;
+  height: 1rpx;
+  margin-top: 15rpx
+}

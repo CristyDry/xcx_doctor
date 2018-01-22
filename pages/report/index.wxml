@@ -1,0 +1,42 @@
+<!--pages/report/index.wxml-->
+<view>
+  <view class='header'>
+    <image class='date' src='/images/date.png'></image>
+    <text bindtap='tapDate' data-date='startDate'>{{year1}}年{{month1}}月{{day1}}日</text>
+    <text>　至　</text>
+    <image class='date' src='/images/date.png'></image>
+    <text bindtap='tapDate' data-date='endDate'>{{year2}}年{{month2}}月{{day2}}日</text>
+  </view>
+</view>
+<view class='line'></view>
+<view wx:for="{{reportList}}" wx:for-item="header" wx:for-index="idx">
+  <view class='title' bindtap='tabTitle' data-idx="{{idx}}">{{header.classifyName}}({{header.nums}})</view>
+
+  <view class="{{header.class}}">
+    <view wx:for="{{header.child}}" wx:for-item="child">
+        <view class='child '>{{child.productName}}({{child.nums}})</view>
+    </view>
+  </view>
+ 
+</view>
+
+
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_attr_box" wx:if="{{showModalStatus}}">
+  <!--drawer content-->
+  <view class="drawer_content">
+    <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange">
+      <picker-view-column>
+        <view wx:for="{{years}}" style="line-height: 50px">{{item}}年</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{months}}" style="line-height: 50px">{{item}}月</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{days}}" style="line-height: 50px">{{item}}日</view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+</view>

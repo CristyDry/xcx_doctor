@@ -1,0 +1,74 @@
+<view class="body" style="{{ifShowcommodityCar?'position:fixed;top:0;width:100%;':''}}">
+	<view class="header_container"  style="{{(direction==1)?'top:0rpx;':'top:0rpx;'}}">
+		<view class="header flex {{searchInputSty && !searchContent?'p_01':''}}" bindtap="focusInput">
+			<view class="middle2 search_icon">
+				<image src="/images/rx//icon_search_01.png"></image>
+			</view>
+			<view class="search_input">
+				<input type="text" cursor-spacing="20" focus="{{focusInput?true:false}}" placeholder="搜索想要的商品" value="{{searchContent}}" bindfocus="searchFocus" bindblur="searchBlur" bindinput="searchInput" bindconfirm="searchContent" placeholder-class="search_placeholder_active"/>
+			</view>
+		</view>
+	</view>
+	<view wx:if="{{hasCommodity}}" class="item_container" bindtouchstart="{{scrollBar?'touchStart':''}}" bindtouchmove="{{scrollBar?'touchMove':''}}">
+		<view wx:for="{{commodityList}}" wx:for-index="idx" wx:for-item="item" class="item_info_container">
+			<view class="item_body flex">
+				<view class="item_image">
+					<image src="{{item.productPic}}"></image>
+				</view>
+				<view class="item_text">
+					<view class="item_text_title">{{item.productName}}</view>
+					<view class="item_text_info flex">
+						<view class="item_text_info_price">{{item.productUnit}}</view>
+						<!--<view class="item_text_info_line"></view>-->
+						<view class="item_text_info_size">￥{{item.price}}</view>
+					</view>
+				</view>
+				<view class="section_inc_btn_sty" data-idx="{{idx}}" bindtap="addToCar">
+					<image src="/images/rx/inc.png"></image>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="no_commodity" wx:else>
+		<image src="/images/rx/no_commodity.png"></image>
+		<view class="col_838383">没有内容~</view>
+	</view>
+</view>
+<view class="footer" style="{{ifShowcommodityCar?'bottom:0':''}}">
+	<view class="mask_top"></view>
+	<view class="car_icon" bindtap="showMoveingCar" animation="{{animationData}}">
+		<image src="/images/rx/icon_car_02.png"></image>
+		<view class="commodity_num">
+			{{commodityNum}}
+		</view>
+	</view>
+	<!--<view class="car_icon_shadow" bindtap="showMoveingCar" animation="{{animationData}}"></view>-->
+	<scroll-view class="footer_car_container" scroll-y="true">
+		<view class="footer_car_item flex" wx:for="{{carCommodityList}}" wx:for-index="idx" wx:for-item="item">
+			<view class="">
+				<view class="car_item_title">{{item.productName}}</view>
+				<view class="car_item_text flex">
+					<view>{{item.productUnit}}</view>
+					<view>￥{{item.price}}</view>
+				</view>
+			</view>
+			<view class="num_btn_block flex">
+				<view class="dec_btn_sty num_btn_sty_01"  bindtap="decreaseNum" data-idx="{{idx}}">
+					<view></view>
+				</view>
+				<view class="acount_num">{{item.total}}</view>
+				<view class="inc_btn_sty num_btn_sty_01" bindtap="increaseNum" data-idx="{{idx}}">
+					<view></view>
+				</view>
+			</view>
+		</view>
+	</scroll-view>
+	<view class="footer_settlement flex">
+		<view class="pay_total_money">
+			<text>合计：</text>
+			<text>{{totalMoney}}元</text>
+		</view>
+		<view class="btn_settlement bg_01" bindtap="toSettlement">确认</view>
+	</view>
+</view>
+<scroll-view wx:if="{{ifShowcommodityCar}}" class="mask" bindtap="hideMovingCar" bindtouchmove="forbitTouch"></scroll-view>

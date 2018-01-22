@@ -1,0 +1,8 @@
+<!--pages/store/store.wxml-->
+<view wx:for="{{stores}}" wx:for-item="area">
+  <view class='header' id="{{area.id}}">{{area.name}}</view>
+  <view class='child' wx:for="{{area.childs}}" wx:for-item="item">
+    <view data-id="{{item.id}}" data-name="{{item.name}}" bindtap='onSelect'>{{item.name}}</view> 
+    <view class='line'></view>
+  </view>
+</view>
